@@ -97,7 +97,7 @@
 
             // 1つ目がタップの動作, 2つ目がホールドの動作
 
-            bindings = <&ime_switch>, <&kp CAPS>;
+            bindings = <&change_US_to_JP>, <&kp CAPS>;
         };
     };
 
