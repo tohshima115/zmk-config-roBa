@@ -94,10 +94,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp L    &kp U         &kp COMMA  &kp PERIOD                                        &kp F        &kp W  &kp R  &kp Y  &kp P
-&kp E         &kp I    &kp A         &kp O      &kp MINUS      &kp LS(LG(S))       &kp SLASH      &kp K        &kp T  &kp N  &kp S  &kp H
-&kp Z         &kp X    &kp C         &kp V      &kp SEMICOLON  &kp COLON           &kp RCTRL      &kp G        &kp D  &kp M  &kp J  &kp B
-&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp CAPS   &lt 2 SPACE    &kp LEFT_SHIFT      &kp BACKSPACE  &lt 1 ENTER                       &kp DEL
+&kp Q         &kp L    &kp U         &kp COMMA      &kp PERIOD                                         &kp F        &kp W  &kp R  &kp Y  &kp P
+&kp E         &kp I    &kp A         &kp O          &kp MINUS    &kp LS(LG(S))       &kp SLASH         &kp K        &kp T  &kp N  &kp S  &kp H
+&kp Z         &kp X    &kp C         &kp V          &kp PLUS     &lt 4 CAPS          &kp COLON         &kp G        &kp D  &kp M  &kp J  &kp B
+&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT      &kp LEFT_CONTROL  &lt 1 ENTER                       &lt 1 ENTER
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -105,19 +105,19 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LPAR   &kp RPAR                                                  &trans  &kp EXCLAMATION  &kp DOLLAR  &kp AMPERSAND  &trans
+&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LBKT   &kp RBKT          &kp LC(LA(KP_NUMBER_0))      &kp ASTRK  &trans  &kp MINUS        &kp UNDER   &kp TILDE      &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LBRC   &kp RBRC          &kp AT                       &trans     &trans  &kp SLASH        &kp PIPE    &kp BACKSLASH  &trans
+&kp NUMBER_0  &kp HASH      &kp PERCENT   &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES            &trans     &trans                                              &trans
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE  &kp LS(TAB)         &kp LC(UP_ARROW)    &kp TAB              &trans                       &trans  &trans    &kp UP    &trans     &trans
+&kp HOME    &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &kp END  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans      &trans              &trans              &trans               &trans   &trans      &trans  &trans  &trans    &trans    &trans     &trans
+&trans      &trans              &trans              &trans               &trans   &trans      &trans  &trans                                 &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -132,7 +132,7 @@
             >;
         };
 
-        SCROLL {
+        DESIGN {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
