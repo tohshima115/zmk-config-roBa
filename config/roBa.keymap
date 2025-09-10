@@ -31,7 +31,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Figma_Alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <8 9>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -51,7 +58,9 @@
                 <&kp SPACE>,
                 <&macro_release>,
                 <&kp LEFT_WIN>;
- // 左Altキーを離す
+
+            // 左Altキーを離す
+
             label = "CHANGE_US_TO_JP";
         };
     };
