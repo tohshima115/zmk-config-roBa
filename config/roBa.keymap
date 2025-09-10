@@ -36,7 +36,7 @@
 
         Figma_Ctrl {
             bindings = <&kp LEFT_CONTROL>;
-            key-positions = <8 9>;
+            key-positions = <19 20>;
         };
     };
 
