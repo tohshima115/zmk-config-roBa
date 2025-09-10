@@ -67,6 +67,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        change_US_to_JP: change_US_to_JP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp SPACE>;
+            label = "CHANGE_US_TO_JP";
+        };
     };
 
     behaviors {
@@ -94,10 +101,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp L    &kp U         &kp COMMA      &kp PERIOD                                          &kp F        &kp W  &kp R  &kp Y  &kp P
-&kp E         &kp I    &kp A         &kp O          &kp MINUS    &kp LS(LG(S))        &kp SLASH         &kp K        &kp T  &kp N  &kp S  &kp H
-&kp Z         &kp X    &kp C         &kp V          &kp PLUS     &lt 4 LA(GRAVE)      &kp COLON         &kp G        &kp D  &kp M  &kp J  &kp B
-&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT       &kp LEFT_CONTROL  &lt 1 ENTER                       &kp ESC
+&kp Q         &kp L    &kp U         &kp COMMA      &kp PERIOD                                           &kp F        &kp W    &kp R  &kp Y  &kp P
+&kp E         &kp I    &kp A         &kp O          &kp MINUS    &kp LS(LG(S))         &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
+&kp Z         &kp X    &kp C         &kp V          &kp PLUS     &change_US_to_JP      &kp COLON         &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
+&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT        &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
