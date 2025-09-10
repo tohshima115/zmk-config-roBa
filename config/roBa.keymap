@@ -58,21 +58,6 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
-
-        left_click {
-            bindings = <&mkp LCLK>;
-            key-positions = <6 7>;
-        };
-
-        right_click {
-            bindings = <&mkp RCLK>;
-            key-positions = <7 8>;
-        };
-
-        test {
-            bindings = <&kp A>;
-            key-positions = <34 39>;
-        };
     };
 
     macros {
@@ -140,10 +125,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans        &trans  &trans  &trans  &trans                              &trans  &trans    &trans    &trans    &trans
+&trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans    &trans    &trans    &trans
+&kp LEFT_ALT  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT      &trans  &trans                                &trans
             >;
         };
 
