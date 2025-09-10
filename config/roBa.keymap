@@ -34,8 +34,8 @@
     combos {
         compatible = "zmk,combos";
 
-        Figma_Alt {
-            bindings = <&kp LEFT_ALT>;
+        Figma_Ctrl {
+            bindings = <&kp LEFT_CONTROL>;
             key-positions = <8 9>;
         };
     };
