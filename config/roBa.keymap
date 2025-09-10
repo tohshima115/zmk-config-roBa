@@ -75,11 +75,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -92,7 +94,7 @@
 &kp Q         &kp L    &kp U         &kp COMMA       &kp PERIOD                                     &kp F        &kp W  &kp R  &kp Y  &kp P
 &kp E         &kp I    &kp A         &kp O           &kp MINUS   &kp LS(LG(S))       &kp SLASH      &kp K        &kp T  &kp N  &kp S  &kp H
 &kp Z         &kp X    &kp C         &kp V           &kp PLUS    &kp COLON           &kp RCTRL      &kp G        &kp D  &kp M  &kp J  &kp B
-&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp LANGUAGE_5  &kp SPACE   &kp LEFT_SHIFT      &kp BACKSPACE  &lt 1 ENTER                       &kp DEL
+&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp LANGUAGE_2  &kp SPACE   &kp LEFT_SHIFT      &kp BACKSPACE  &lt 1 ENTER                       &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
