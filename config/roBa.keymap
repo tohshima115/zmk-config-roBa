@@ -82,18 +82,21 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
-        }
 
-        // タップでIME切替、ホールドでCapsLockになる新しい動作を定義
+            // タップでIME切替、ホールドでCapsLockになる新しい動作を定義
+        };
+
         th_ime_caps: th_ime_caps {
             compatible = "zmk,behavior-tap-hold";
             label = "TAP_IME_HOLD_CAPS";
             #binding-cells = <0>;
 
             // タップとホールドを判定する時間 (ミリ秒)。200msが一般的。
-            tapping-term-ms = <200>; 
-            
+
+            tapping-term-ms = <200>;
+
             // 1つ目がタップの動作, 2つ目がホールドの動作
+
             bindings = <&ime_switch>, <&kp CAPS>;
         };
     };
@@ -103,10 +106,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp L    &kp U         &kp COMMA      &kp PERIOD                                           &kp F        &kp W    &kp R  &kp Y  &kp P
-&kp E         &kp I    &kp A         &kp O          &kp MINUS    &kp LS(LG(S))         &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
-&kp Z         &kp X    &kp C         &kp V          &kp PLUS     &change_US_to_JP      &kp COLON         &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
-&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT        &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
+&kp Q         &kp L    &kp U         &kp COMMA      &kp PERIOD                                         &kp F        &kp W    &kp R  &kp Y  &kp P
+&kp E         &kp I    &kp A         &kp O          &kp MINUS    &kp LS(LG(S))       &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
+&kp Z         &kp X    &kp C         &kp V          &kp PLUS     &th_ime_caps        &kp COLON         &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
+&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT      &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
