@@ -82,6 +82,19 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
+        }
+
+        // タップでIME切替、ホールドでCapsLockになる新しい動作を定義
+        th_ime_caps: th_ime_caps {
+            compatible = "zmk,behavior-tap-hold";
+            label = "TAP_IME_HOLD_CAPS";
+            #binding-cells = <0>;
+
+            // タップとホールドを判定する時間 (ミリ秒)。200msが一般的。
+            tapping-term-ms = <200>; 
+            
+            // 1つ目がタップの動作, 2つ目がホールドの動作
+            bindings = <&ime_switch>, <&kp CAPS>;
         };
     };
 
