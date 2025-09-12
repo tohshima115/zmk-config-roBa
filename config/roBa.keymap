@@ -38,11 +38,6 @@
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <19 20>;
         };
-
-        test {
-            bindings = <&none>;
-            key-positions = <14 7>;
-        };
     };
 
     macros {
