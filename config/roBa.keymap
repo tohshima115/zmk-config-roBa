@@ -95,6 +95,24 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        plus_eq: plus_eq {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_EQ";
+            bindings = <&kp LS(SEMICOLON)>, <&kp LS(MINUS)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        minus_underscore: minus_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_UNDERSCORE";
+            bindings = <&kp MINUS>, <&kp LS(RIGHT_BRACKET)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -102,10 +120,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp L    &kp U         &kp COMMA      &kp PERIOD                                              &kp F        &kp W    &kp R  &kp Y  &kp P
-&kp E         &kp I    &kp A         &kp O          &kp MINUS    &kp LS(LG(S))            &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
-&kp Z         &kp X    &kp C         &kp V          &kp PLUS     &th_ime_caps CAPS 0      &kp COLON         &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
-&kp LEFT_ALT  &kp TAB  &kp LEFT_WIN  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT           &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
+&kp Q         &kp L         &kp U     &kp COMMA      &kp PERIOD                                               &kp F        &kp W    &kp R  &kp Y  &kp P
+&kp E         &kp I         &kp A     &kp O          &kp TAB      &kp LS(LG(S))            &minus_underscore  &kp K        &kp T    &kp N  &kp S  &kp H
+&kp Z         &kp LEFT_ALT  &kp C     &kp V          &kp X        &th_ime_caps CAPS 0      &plus_eq           &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
+&kp LEFT_WIN  &kp SLASH     &kp SEMI  &kp BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT           &kp LEFT_CONTROL   &lt 1 ENTER                         &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -113,10 +131,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LPAR   &kp RPAR                                                  &trans  &kp EXCLAMATION  &kp DOLLAR      &kp AMPERSAND  &trans
-&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LBKT   &kp RBKT          &kp LC(LA(KP_NUMBER_0))      &kp ASTRK  &trans  &kp MINUS        &kp UNDERSCORE  &kp TILDE      &kp F12
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LBRC   &kp RBRC          &kp AT                       &trans     &trans  &kp SLASH        &kp PIPE        &kp BACKSLASH  &kp F2
-&kp NUMBER_0  &kp HASH      &kp PERCENT   &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES            &trans     &trans                                                  &trans
+&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(N9)         &kp LS(N0)                                                        &trans  &kp EXCLAMATION  &kp DOLLAR      &kp AMPERSAND  &trans
+&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH      &kp LC(LA(KP_NUMBER_0))      &kp ASTRK  &trans  &kp MINUS        &kp UNDERSCORE  &kp TILDE      &kp F12
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE    &kp LS(NON_US_BACKSLASH)  &kp LEFT_BRACKET             &trans     &trans  &kp SLASH        &kp PIPE        &kp BACKSLASH  &kp F2
+&kp NUMBER_0  &kp HASH      &kp PERCENT   &kp GRAVE          &kp SINGLE_QUOTE          &kp DOUBLE_QUOTES            &trans     &trans                                                  &trans
             >;
         };
 
