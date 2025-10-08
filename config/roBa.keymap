@@ -140,10 +140,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(N8)         &kp LEFT_PARENTHESIS                                          &trans  &kp EXCLAMATION  &kp DOLLAR      &kp AMPERSAND  &trans
-&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_BRACKET  &kp NON_US_HASH       &kp LC(LA(KP_NUMBER_0))      &kp ASTRK  &trans  &kp MINUS        &kp UNDERSCORE  &kp TILDE      &kp F12
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE    &kp LS(NON_US_HASH)   &kp LS(LEFT_BRACKET)         &trans     &trans  &kp SLASH        &kp PIPE        &kp BACKSLASH  &kp F2
-&kp NUMBER_0  &kp HASH      &kp PERCENT   &kp GRAVE          &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES            &trans     &trans                                                  &trans
+&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(N8)         &kp LEFT_PARENTHESIS                                          &kp F5        &kp LS(LEFT_BRACE)  &kp LS(N7)     &kp LS(NUMBER_2)  &trans
+&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_BRACKET  &kp NON_US_HASH       &kp LC(LA(KP_NUMBER_0))      &kp SLASH  &kp LS(INT3)  &kp INT_RO          &kp LS(EQUAL)  &kp F2            &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE    &kp LS(NON_US_HASH)   &kp LS(LEFT_BRACKET)         &trans     &trans        &trans              &trans         &trans            &trans
+&kp NUMBER_0  &kp PERCENT   &kp HASH      &kp DELETE         &kp LS(SPACE)         &kp F12                      &trans     &trans                                                             &trans
             >;
         };
 
