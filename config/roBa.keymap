@@ -63,6 +63,60 @@
 
             label = "CHANGE_US_TO_JP";
         };
+
+        win_sleep: win_sleep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_tap>,
+                <&kp S>;
+
+            label = "WIN_SLEEP";
+        };
+
+        win_shutdown: win_shutdown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_tap>,
+                <&kp U>;
+
+            label = "WIN_SHUTDOWN";
+        };
+
+        win_restart: win_restart {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_tap>,
+                <&kp R>;
+
+            label = "WIN_RESTART";
+        };
     };
 
     behaviors {
@@ -189,10 +243,10 @@
 
         Utility {
             bindings = <
-&trans  &trans  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP                           &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &trans           &trans      &trans       &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &trans           &trans      &trans       &trans       &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &trans           &trans      &kp C_SLEEP  &kp C_POWER                          &trans
+&trans  &trans  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP                            &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans        &trans           &trans      &trans        &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans        &trans           &trans      &win_restart  &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans        &trans           &trans      &win_sleep    &win_shutdown                          &trans
             >;
         };
     };
