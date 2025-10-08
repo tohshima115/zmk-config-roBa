@@ -108,7 +108,16 @@
         minus_underscore: minus_underscore {
             compatible = "zmk,behavior-mod-morph";
             label = "MINUS_UNDERSCORE";
-            bindings = <&kp MINUS>, <&kp INT_RO>;
+            bindings = <&kp MINUS>, <&kp RS(INT_RO)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        colon_semicolon: colon_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_SEMICOLON";
+            bindings = <&kp SQT>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -120,10 +129,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp L  &kp U     &kp COMMA      &kp PERIOD                                                        &kp F        &kp W    &kp R  &kp Y  &kp P
-&kp E         &kp I  &kp A     &kp O          &minus_underscore  &kp LS(LG(S))                &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
-&kp LEFT_ALT  &kp Z  &kp C     &kp V          &kp X              &kp LANG_ZENKAKUHANKAKU      &kp COLON         &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
-&kp LEFT_WIN  &kp X  &plus_eq  &kp BACKSPACE  &lt 2 SPACE        &kp LEFT_SHIFT               &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
+&kp Q         &kp L  &kp U     &kp COMMA      &kp PERIOD                                               &kp F        &kp W    &kp R  &kp Y  &kp P
+&kp E         &kp I  &kp A     &kp O          &minus_underscore  &kp LS(LG(S))       &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
+&kp LEFT_ALT  &kp Z  &kp C     &kp V          &kp X              &kp GRAVE           &colon_semicolon  &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
+&kp LEFT_WIN  &kp X  &plus_eq  &kp BACKSPACE  &lt 2 SPACE        &kp LEFT_SHIFT      &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -140,10 +149,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE  &kp LS(TAB)         &kp LC(UP_ARROW)    &kp TAB              &trans                       &trans  &trans    &kp UP    &trans     &trans
-&kp HOME    &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &kp END  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans      &trans              &trans              &trans               &trans   &trans      &trans  &trans  &trans    &trans    &trans     &trans
-&trans      &trans              &trans              &trans               &trans   &trans      &trans  &trans                                 &trans
+&kp ESCAPE  &kp LS(TAB)             &kp LC(RS(UP_ARROW))    &kp TAB                  &trans                       &trans  &trans    &kp UP    &trans     &trans
+&kp HOME    &kp LC(RS(LEFT_ARROW))  &kp LC(RS(DOWN_ARROW))  &kp LC(RS(RIGHT_ARROW))  &kp END  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans      &trans                  &trans                  &trans                   &trans   &trans      &trans  &trans  &trans    &trans    &trans     &trans
+&trans      &trans                  &trans                  &trans                   &trans   &trans      &trans  &trans                                 &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
