@@ -131,7 +131,7 @@
             bindings = <
 &kp Q         &kp L  &kp U     &kp COMMA      &kp PERIOD                                               &kp F        &kp W    &kp R  &kp Y  &kp P
 &kp E         &kp I  &kp A     &kp O          &minus_underscore  &kp LS(LG(S))       &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
-&kp LEFT_ALT  &kp Z  &kp C     &kp V          &kp X              &kp GRAVE           &colon_semicolon  &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
+&kp LEFT_ALT  &kp Z  &kp C     &kp V          &kp TAB            &kp GRAVE           &colon_semicolon  &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
 &kp LEFT_WIN  &kp X  &plus_eq  &kp BACKSPACE  &lt 2 SPACE        &kp LEFT_SHIFT      &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
             >;
 
@@ -140,10 +140,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(N9)         &kp LS(N0)                                                        &trans  &kp EXCLAMATION  &kp DOLLAR      &kp AMPERSAND  &trans
-&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH      &kp LC(LA(KP_NUMBER_0))      &kp ASTRK  &trans  &kp MINUS        &kp UNDERSCORE  &kp TILDE      &kp F12
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE    &kp LS(NON_US_BACKSLASH)  &kp LEFT_BRACKET             &trans     &trans  &kp SLASH        &kp PIPE        &kp BACKSLASH  &kp F2
-&kp NUMBER_0  &kp HASH      &kp PERCENT   &kp GRAVE          &kp SINGLE_QUOTE          &kp DOUBLE_QUOTES            &trans     &trans                                                  &trans
+&kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(N8)         &kp LEFT_PARENTHESIS                                          &trans  &kp EXCLAMATION  &kp DOLLAR      &kp AMPERSAND  &trans
+&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_BRACKET  &kp NON_US_HASH       &kp LC(LA(KP_NUMBER_0))      &kp ASTRK  &trans  &kp MINUS        &kp UNDERSCORE  &kp TILDE      &kp F12
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE    &kp LS(NON_US_HASH)   &kp LS(LEFT_BRACKET)         &trans     &trans  &kp SLASH        &kp PIPE        &kp BACKSLASH  &kp F2
+&kp NUMBER_0  &kp HASH      &kp PERCENT   &kp GRAVE          &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES            &trans     &trans                                                  &trans
             >;
         };
 
