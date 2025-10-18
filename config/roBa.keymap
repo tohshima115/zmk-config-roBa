@@ -186,7 +186,7 @@
 &kp Q         &kp L  &kp U     &kp COMMA      &kp PERIOD                                               &kp F        &kp W    &kp R  &kp Y  &kp P
 &kp E         &kp I  &kp A     &kp O          &minus_underscore  &kp LS(LG(S))       &kp SLASH         &kp K        &kp T    &kp N  &kp S  &kp H
 &kp LEFT_ALT  &kp Z  &kp C     &kp V          &kp TAB            &lt 6 GRAVE         &colon_semicolon  &kp G        &lt 4 D  &kp M  &kp J  &lt 5 B
-&kp LEFT_WIN  &kp X  &plus_eq  &kp BACKSPACE  &lt 2 SPACE        &kp LEFT_SHIFT      &kp LEFT_CONTROL  &lt 1 ENTER                         &kp ESC
+&kp LEFT_WIN  &kp X  &plus_eq  &kp BACKSPACE  &lt 2 SPACE        &kp LEFT_SHIFT      &kp LEFT_CONTROL  &lt 1 ENTER                         &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
